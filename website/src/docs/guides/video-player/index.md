@@ -108,7 +108,12 @@ Cycle between different view modes. Possible values include:
 
 ### Long press
 
-Long press the player (anywhere but on a button) to bring up the [Share](/docs/guides/video-player/sheets#share-sheet) sheet.
+If `Hold speed` is enabled in <nav to="gestures">, press and hold the player (anywhere but on a button) to play at 2x speed.
+Without lifting your finger, drag left or right to change the speed, from 0.25x up to 4x. Release to go back to the normal speed.
+
+### Two-finger press
+
+Press the player with two fingers to bring up the [Share](/docs/guides/video-player/sheets#share-sheet) sheet, where you can save or share a screenshot of the current frame.
 
 ### Horizontal swiping
 

@@ -60,6 +60,12 @@ When enabled and an intro or ending is reached, a toast will display showing the
 
 The time taken before an intro or ending is skipped when **Netflix style** is enabled.
 
+## Press and hold
+
+### Hold speed <Badge text="On" type="info" /> {#hold-speed}
+
+Press and hold the video to play at 2x speed, then drag your finger left or right to change the speed (from 0.25x to 4x). Release to go back to the normal speed.
+
 ## Double tap
 
 Change what double tapping on each region of the player does. If `Custom` is set, left will send the keycode `0x10001`, center will send the keycode `0x10002`, and right will send the keycode `0x10003`.

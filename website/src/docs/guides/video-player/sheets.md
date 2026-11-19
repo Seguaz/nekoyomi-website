@@ -22,6 +22,10 @@ This section explains what the different sheets do.
 
 Add subtitles from a file on your device.
 
+### Search OpenSubtitles
+
+Search [OpenSubtitles](https://www.opensubtitles.com/) for subtitles for the current episode and add one to the video, without leaving the player. No account is needed.
+
 ### <TitleIcon name="subtitle_settings"/> Subtitle settings
 
 Open panel for [Subtitle settings](/docs/guides/video-player/panels#subtitle-settings).
@@ -94,7 +98,7 @@ Here, a list of all the [Custom buttons](/docs/guides/player-settings/custom-but
 
 ### Audio channels
 
-See [Player settings](/docs/guides/player-settings/#audio-channels).
+See [Player settings](/docs/guides/player-settings/audio#audio-channels).
 
 ## Playback sheet
 

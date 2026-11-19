@@ -31,6 +31,9 @@ Yes!
 Novel sources come from novel extension repositories, just like manga and anime sources.
 See the [light novels guide](/docs/guides/novels) to get started.
 
+## Does Nekoyomi have home-screen widgets?
+Yes. Besides the cover grid widget, there are **Updates (list)** and **Anime Updates (list)** widgets that show your latest updates with cover, title and new chapter or episode.
+
 ## What does Nekoyomi add over Aniyomi?
 Light novels, custom series folders, library grouping and tag filters, mass migration, online subtitles, a floating navigation bar, community app icons and much more.
 See the [full list of features](/docs/features).

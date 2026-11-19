@@ -41,3 +41,14 @@ You can also add multiple series to a category by selecting them when you see th
 You can also remove multiple series from a category by selecting them when you see the **Set categories** button.
 :::
 ::::
+
+## Category options
+
+In <nav to="categories">, tap the <nav to="overflow"> button next to a category for more options:
+
+- **Default reading mode for this category:** series in this category open in the reading mode you choose (paged, webtoon…), unless a series has its own reading mode set.
+- **Auto-hide when the app closes (private):** the category hides itself again every time you close the app, even if you showed it in the meantime. Hidden categories are also left out of Updates.
+
+::: tip
+Novels have their own categories. Manage them in the **Novels** tab of <nav to="categories">.
+:::

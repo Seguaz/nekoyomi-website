@@ -17,6 +17,11 @@ Note that Nekoyomi will download from up to five different sources in parallel.
 Downloads stopping midway may be related to network connection issues or source problems.
 **Nekoyomi** will provide notifications regarding encountered errors during download attempts.
 
+If you lose connection, downloads pause and resume on their own when the connection comes back.
+
+## How can I see how much space my downloads use?
+Turn on **Show download size** in <nav to="appearance"> to see the on-disk size of each downloaded chapter or episode in its list.
+
 ## Why can't I see my downloads?
 Downloads might not be detected due to multiple factors:
 

@@ -38,6 +38,21 @@ When prompted while installing your first extension, allow unknown apps installa
 :::
 ::::
 
+## Which repositories can I add?
+**Nekoyomi** works with Aniyomi and Mihon extension repositories, including those using the newer manga extension format (tachiyomix 1.6), such as Keiyoushi.
+You can add a repository by its base URL or by any of its index files (`index.min.json`, `index.json` or `index.pb`).
+Each installed extension shows which repository it came from.
+
+For novel repositories, see the [light novels guide](/docs/guides/novels#add-novel-sources).
+
+## Can I install several extensions at once?
+Yes. Extensions are queued and installed one at a time, so the system install prompts don't stack up.
+Extensions waiting their turn show **Queued**.
+
+## Why can't I update an extension?
+If the new version is signed with a different certificate (usually because it comes from another repository), Android won't let it replace the installed one.
+**Nekoyomi** shows a message when this happens: uninstall the extension first, then install it again.
+
 ## How do I uninstall an extension?
 Uninstall extensions like regular apps: through device settings or in **Nekoyomi**.
 

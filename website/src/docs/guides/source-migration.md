@@ -62,7 +62,7 @@ You can choose the order in which sources are searched when migrating.
 1. Drag your preferred sources to the top. Matches are searched there first, then in the rest.
 1. Uncheck a source to skip it, and use the language chips to show only the sources in a given language.
 
-The same order is used by the [automatic source fallback](/docs/features#video-player) in the video player.
+The same order is used by the [automatic source fallback](/docs/guides/player-settings/internal-player-settings#automatic-source-fallback) in the video player.
 
 ::: tip
 Migration respects content types: novels are only matched with novel sources, and manga only with manga sources.

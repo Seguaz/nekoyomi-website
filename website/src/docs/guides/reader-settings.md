@@ -101,6 +101,10 @@ TBA
 Automatically sets the color based on the content of your page.
 :::
 
+::: tip
+The reader's own settings sheet (**General** tab) also has a **Beige** background: a warm, paper-like color with sepia text.
+:::
+
 ### Fullscreen <Badge type="info" text="On" />
 TBA
 
@@ -266,6 +270,12 @@ TBA
 
 ### Double tap to zoom <Badge type="info" text="On" />
 TBA
+
+### Auto-scroll
+
+Tap the ▶ **Auto-scroll** button in the reader menu to scroll hands-free.
+Change the speed with **Auto-scroll speed** in the reader's settings sheet.
+Auto-scroll keeps going after you swipe manually, and the screen stays on while it runs.
 
 ## Navigation
 TBA

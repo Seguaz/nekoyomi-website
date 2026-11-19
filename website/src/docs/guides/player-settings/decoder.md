@@ -32,3 +32,8 @@ Depending on the phone model, mpv can sometimes be unable to play videos with ce
 ### Use YUV420P pixel format <Badge text="On" type="info" />
 
 See option description.
+
+### Reduce screen tearing (experimental) <Badge text="Off" type="info" /> {#reduce-screen-tearing}
+
+Syncs playback to your display's refresh rate and interpolates frames to reduce tearing.
+It may not remove tearing on every device and can use more battery.

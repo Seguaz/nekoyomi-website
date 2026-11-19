@@ -107,6 +107,21 @@ This option toggles the automatic entry into PiP mode when exiting the player.
 
 Self-explanatory.
 
+## Hosters
+
+### Automatic source fallback <Badge text="Off" type="info" /> {#automatic-source-fallback}
+
+When a source has no working video for an episode, **Nekoyomi** looks for the same episode in your other installed sources and switches to the first one that plays.
+While it searches, the player shows *"Source has no video, trying another…"*.
+
+::: warning Experimental
+This feature is still being tested and refined. Feedback is welcome on [Discord](https://discord.gg/ZAUadQD5EM).
+:::
+
+### Source priority
+
+The order in which sources are tried. It is shared with [migration](/docs/guides/source-migration#source-priority).
+
 ## External player
 
 ### Always use external player <Badge text="Off" type="info" />

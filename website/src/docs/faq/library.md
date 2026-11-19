@@ -42,6 +42,37 @@ If unsuccessful, refer to [Don't Kill My App](https://dontkillmyapp.com/) for ho
 Badges can be enabled by navigating to <nav to="main_library">, then going to **Filter** and clicking the **Display** tab.
 Then, at the bottom, select **Download badges**.
 
+## How do I group several entries into one series?
+Long press the entries you want to group, press **Group into series** and give the series a name.
+The series becomes a folder with a count badge. Tap it to see its entries.
+
+From the folder's <nav to="overflow"> menu (or by long pressing it) you can rename it, set a custom cover or a 2×2 collage, or ungroup it.
+
+## How do I group my library by source, status or tag?
+Go to <nav to="main_library">, open **Filter** and select the **Group** tab.
+You can group by source, status, language, tag or tracking status. Your categories aren't changed.
+
+## How do I filter my library by tags?
+Go to <nav to="main_library">, open **Filter** and expand the **Tags** section.
+Tap a tag once to show only entries with it, and tap it again to hide those entries instead. Press **Reset** to clear them all.
+
+## How do I keep entries at the top of a category?
+Long press the entries and press **Pin to top**.
+Pinned entries always stay above the rest of their category and show a pushpin badge.
+
+## How do I see how many times I've watched or read something?
+Every time you finish an episode or chapter, it's counted, re-watches and re-reads included.
+Once the count goes above one, it shows as `×N` in the episode or chapter list.
+
+You can also sort your library by **Times watched** or **Times read**.
+
+## Can I show episodes or chapters as a grid?
+Yes. In an entry, open the **Filter** menu of the episode or chapter list, go to the **Display** tab and turn on **Grid view (2 columns)**.
+
+## Can I choose what time the library updates?
+Yes. In <nav to="library">, set **Update at a specific time** under **Global update**.
+It's available for daily and longer update intervals.
+
 ## Can I sync between multiple devices?
 **Nekoyomi** can't sync between devices.
 Use its [backup and restore](/docs/guides/backups) features, including [auto backups](/docs/guides/backups#enabling-automatic-backups), for series database and content migration to another device.
@@ -52,7 +83,7 @@ Dealing with series translated by multiple groups that result in duplicate episo
 Bookmark or mark as watched the undesired episodes, then open the **Filter** menu, ensure you're on the **Filter** tab, then double-tap **Bookmarked** or single-tap **Unwatched**.
 
 This hides bookmarked or watched episodes, enabling you to skip them as you watch.
-Ensure [Skip filtered episodes](/docs/guides/reader-settings#skip-filtered-episodes) is enabled at <nav to="reader"> under the section **Watching**.
+Ensure [Skip filtered episodes](/docs/guides/reader-settings#skip-filtered-chapters) is enabled at <nav to="reader"> under the section **Watching**.
 
 Alternatively, migrate to a source without duplicates.
 Refer to the [migration guide](/docs/guides/source-migration) for detailed instructions.
@@ -67,7 +98,11 @@ If certain series episodes are marked as unwatched without your interaction, it 
 **Nekoyomi** detects these changes and interprets the episodes as new.
 
 ## How do I pause watching history?
-Disable **Incognito Mode** through <nav to="incognito-mode">.
+Enable **Incognito Mode** through <nav to="incognito-mode">.
+
+## Can I delete old history automatically?
+Yes. In <nav to="data-and-storage">, set **Auto-delete history older than** to the period you want.
+Reading and watching history older than that is removed automatically.
 
 ## How do I only read downloaded episodes?
 Enable **Download only** via <nav to="downloaded-only">.

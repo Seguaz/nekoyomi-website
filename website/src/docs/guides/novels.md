@@ -46,16 +46,16 @@ A chapter is marked as read when you reach the end of its text, not when you ope
 
 ### Reader settings
 
-Open the reader settings (the ⚙ button in the reader menu) to customize the text:
+Open the reader settings (the ⚙ button in the reader menu) to customize the text.
 
-| Setting | Where | Options |
-| --- | --- | --- |
-| Text size | **Reading mode** tab | Adjustable |
-| Font | **Reading mode** tab | Serif, Sans, Mono |
-| Line spacing | **Reading mode** tab | Adjustable |
-| Margins | **Reading mode** tab | Adjustable |
-| Justify text | **Reading mode** tab | On / off |
-| Background color | **General** tab | Includes **Beige**, a warm paper-like background with sepia text |
+In the **Reading mode** tab you can change:
+
+- **Text size**.
+- **Font**: serif, sans or mono.
+- **Line spacing** and **Margins**.
+- **Justify text**.
+
+In the **General** tab you can pick the background color, including **Beige**, a warm paper-like background with sepia text.
 
 ### Auto-scroll
 
@@ -97,7 +97,7 @@ Epubs in the Local novel source count as novels: they go to the novel library, u
 ## Organizing your novels
 
 - **Categories:** novel categories are separate from manga ones. Manage them in <nav to="categories"> -> **Novels**.
-- **Library settings:** filters, tag filters, grouping, pinning, column count and [custom series](/docs/features#library) work the same as in the manga library, but are saved separately.
+- **Library settings:** filters, tag filters, grouping, pinning, column count and [custom series](/docs/faq/library#how-do-i-group-several-entries-into-one-series) work the same as in the manga library, but are saved separately.
 - **Updates and history:** novels have their own **Novels** sub-tab in Updates and History.
 - **Library updates:** refreshing the novel library only updates novels. To choose which novel categories are included in or excluded from automatic updates, go to <nav to="library">.
 - **Migration:** use the **Migrate Novels** tab in <nav to="main_browse">. Novels are only matched with novel sources.
