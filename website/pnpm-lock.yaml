@@ -28,8 +28,8 @@ importers:
         version: 3.5.44
     devDependencies:
       '@mdit/plugin-attrs':
-        specifier: 0.13.1
-        version: 0.13.1(markdown-it@14.3.3)
+        specifier: 1.2.0
+        version: 1.2.0(markdown-it@14.3.3)
       '@mdit/plugin-figure':
         specifier: 0.13.1
         version: 0.13.1(markdown-it@14.3.3)
@@ -362,11 +362,20 @@ packages:
   '@jridgewell/sourcemap-codec@1.6.0':
     resolution: {integrity: sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==}
 
-  '@mdit/plugin-attrs@0.13.1':
-    resolution: {integrity: sha512-3saBw5W2y3T0QNbui+uk7nfD36FOoBWNQImk+pbMGpKRqunjouiYP4ZtnttT/AiieGbZBVaOqhM4e01Uyua8VA==}
-    engines: {node: '>= 18'}
+  '@mdit/helper@1.0.1':
+    resolution: {integrity: sha512-zAzShsRZmkqjuoOFg6/zTCYVpvghj9a30Cl/eOGkE0xzRJJJG8T18eqb2lgceQhjVLWHK02HNVkzyfNHc429lQ==}
+    engines: {node: '>=22'}
     peerDependencies:
-      markdown-it: ^14.1.0
+      markdown-it: ^14.2.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
+  '@mdit/plugin-attrs@1.2.0':
+    resolution: {integrity: sha512-aBwFuCRPmzlun3KnMD+Ua5iWV+ZraAwQDll1LeWRKaex+/RZUmFKCyKpS1Dl0YjXLwkf3O88VxbcGUNer4gObQ==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      markdown-it: ^14.2.0
     peerDependenciesMeta:
       markdown-it:
         optional: true
@@ -1515,8 +1524,15 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.6.0': {}
 
-  '@mdit/plugin-attrs@0.13.1(markdown-it@14.3.3)':
+  '@mdit/helper@1.0.1(markdown-it@14.3.3)':
     dependencies:
+      '@types/markdown-it': 14.1.2
+    optionalDependencies:
+      markdown-it: 14.3.3
+
+  '@mdit/plugin-attrs@1.2.0(markdown-it@14.3.3)':
+    dependencies:
+      '@mdit/helper': 1.0.1(markdown-it@14.3.3)
       '@types/markdown-it': 14.1.2
     optionalDependencies:
       markdown-it: 14.3.3
