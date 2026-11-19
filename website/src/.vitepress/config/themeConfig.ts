@@ -2,7 +2,7 @@ import type { DefaultTheme } from 'vitepress'
 
 import nav from './navigation/navbar'
 import sidebar from './navigation/sidebar'
-import { APP_GITHUB_URL, DISCORD_URL, WEBSITE_GITHUB_URL } from './constants'
+import { APP_GITHUB_URL, DISCORD_URL, KOFI_URL, WEBSITE_GITHUB_URL } from './constants'
 
 const themeConfig: DefaultTheme.Config = {
   logo: {
@@ -27,6 +27,12 @@ const themeConfig: DefaultTheme.Config = {
       icon: 'discord',
       link: DISCORD_URL,
       ariaLabel: 'Discord Server',
+    },
+    {
+      // Plain link only: no Ko-fi widget/script, so the CSP stays third-party free.
+      icon: 'kofi',
+      link: KOFI_URL,
+      ariaLabel: 'Support Nekoyomi on Ko-fi',
     },
   ],
 

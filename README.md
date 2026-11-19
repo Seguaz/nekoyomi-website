@@ -10,6 +10,7 @@
 A full-featured player and reader for Android, based on Aniyomi.
 
 [![Discord server](https://img.shields.io/badge/Discord-join-7389D8?labelColor=6A7EC2&logo=discord&logoColor=FFFFFF)](https://discord.gg/ZAUadQD5EM)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-support-FF5E5B?logo=kofi&logoColor=FFFFFF)](https://ko-fi.com/seguaz_)
 [![Deploy](https://github.com/Seguaz/nekoyomi-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Seguaz/nekoyomi-website/actions/workflows/deploy.yml)
 
 ## Contributing
