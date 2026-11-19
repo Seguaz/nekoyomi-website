@@ -12,15 +12,15 @@ import { data as release } from "@theme/data/release.data"
 
 Essential information to help you get set up with Nekoyomi.
 
-## Installation guide
+## Installation guide {#installation-guide}
 
-### Downloading Nekoyomi
+### Downloading Nekoyomi {#downloading-nekoyomi}
 
 1. Visit our [download](/download/) page to get the latest version of **Nekoyomi**.
 2. After the download is complete, open the `.apk` file.
 3. Proceed with the installation process.
 
-### Adding sources
+### Adding sources {#adding-sources}
 
 Once **Nekoyomi** is installed on your device, you can bring your own content to read from various sources:
 
@@ -55,7 +55,7 @@ Nekoyomi will not provide resources for any unofficial extensions. Beware that a
 :::
 ::::
 
-### Adding series to your library
+### Adding series to your library {#adding-series-to-your-library}
 
 After installing the desired extension, you'll find it in the **Manga/Anime Sources** tab.
 
@@ -66,9 +66,9 @@ Here's how you can add series to your library:
 3. Once you've found the series that you want to add, tap on it for more details.
 4. Press the "**Add to library**" button, and the series will be added to your Library, ready to be read/watched!
 
-## Additional setup
+## Additional setup {#additional-setup}
 
-### Series search options
+### Series search options {#series-search-options}
 
 If you want to search for series across all your sources, you can use the Global Search feature.
 
@@ -78,7 +78,7 @@ Follow these steps:
 2. Ensure you're on the "**Sources**" tab located at the top-right corner.
 3. Use the Search icon in the toolbar to find series from all available sources.
 
-### Trouble finding a specific series?
+### Trouble finding a specific series? {#trouble-finding-a-specific-series}
 
 If you encounter difficulties while searching for a specific series, consider the following points:
 

@@ -18,7 +18,9 @@ import generateMeta from './config/hooks/generateMeta'
 import generateFeed from './config/hooks/generateFeed'
 
 import { SITE_URL } from './config/constants'
+import { dictionary, english, locales } from './config/i18n'
 import { LEGACY_REDIRECTS, injectCsp, redirectPage } from './config/security'
+import { localeThemeConfig } from './config/themeConfig'
 
 const title = 'Nekoyomi'
 const description = 'Watch anime, read manga and light novels – all in one app, on your Android device.'
@@ -31,6 +33,8 @@ export default defineConfig({
   lang: 'en-US',
   lastUpdated: true,
   cleanUrls: true,
+  // Site data (nav/sidebar of every locale) goes into one cacheable script instead of being inlined in every page.
+  metaChunk: true,
   title,
   description,
   sitemap: {
@@ -39,6 +43,21 @@ export default defineConfig({
   head: headConfig,
   markdown: markdownConfig,
   themeConfig,
+  // Localized copies of the pages are generated into src/<locale>/ by scripts/i18n.mjs.
+  locales: {
+    root: { label: english.label, lang: 'en-US' },
+    ...Object.fromEntries(locales.map(({ key, lang, dir }) => {
+      const t = dictionary(key)
+      return [key, {
+        label: t.label,
+        lang,
+        dir,
+        link: `/${key}/`,
+        description: t.description,
+        themeConfig: localeThemeConfig(t, `/${key}`),
+      }]
+    })),
+  },
   transformHead: async context => generateMeta(context, hostname),
   // Every generated page gets a strict, hash-based Content-Security-Policy.
   transformHtml: html => injectCsp(html),

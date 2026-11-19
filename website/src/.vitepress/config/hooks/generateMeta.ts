@@ -1,10 +1,25 @@
 import type { HeadConfig, TransformContext } from 'vitepress'
+import { locales } from '../i18n'
+
+const cleanPath = (relativePath: string) => relativePath.replace(/((^|\/)index)?\.md$/, '$2')
 
 function generateMeta(context: TransformContext, hostname: string) {
   const head: HeadConfig[] = []
   const { pageData } = context
 
-  const url = `${hostname}/${pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2')}`
+  const url = `${hostname}/${cleanPath(pageData.relativePath)}`
+
+  // Alternate language versions of the same page (every page exists in every locale).
+  const firstSegment = pageData.relativePath.split('/')[0]
+  const pageLocale = locales.find(l => l.key === firstSegment)
+  const basePath = pageLocale ? pageData.relativePath.slice(firstSegment.length + 1) : pageData.relativePath
+  if (!pageData.isNotFound) {
+    head.push(['link', { rel: 'alternate', hreflang: 'en', href: `${hostname}/${cleanPath(basePath)}` }])
+    for (const { key, lang } of locales)
+      head.push(['link', { rel: 'alternate', hreflang: lang, href: `${hostname}/${key}/${cleanPath(basePath)}` }])
+    head.push(['link', { rel: 'alternate', hreflang: 'x-default', href: `${hostname}/${cleanPath(basePath)}` }])
+  }
+  head.push(['meta', { property: 'og:locale', content: (pageLocale?.lang ?? 'en-US').replace('-', '_') }])
 
   const addMetaTag = (name: string, content: any) => {
     if (content !== undefined && content !== null)

@@ -3,6 +3,9 @@ import { computed, toRefs } from 'vue'
 import MarkdownIt from 'markdown-it'
 import { type AppRelease, data as release } from '../data/release.data'
 import { APP_GITHUB_URL } from '../../config/constants'
+import { useI18n } from '../i18n'
+
+const { t, localePath, localeIndex } = useI18n()
 
 const props = defineProps<{ type: keyof AppRelease }>()
 const { type } = toRefs(props)
@@ -15,7 +18,7 @@ const changelog = computed(() => {
     // The page already has its own heading; drop the "## Nekoyomi vX.Y.Z" title of the release notes.
     .replace(/^\s*#{1,2} Nekoyomi v[^\n]*\n/, '')
     .replace(/(?<=\(|(, ))@([\w-]+)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
-    .replace(`${APP_GITHUB_URL}/releases`, '/changelogs/')
+    .replace(`${APP_GITHUB_URL}/releases`, localePath('/changelogs/'))
   return md.render(flavoredString)
 })
 </script>
@@ -24,15 +27,17 @@ const changelog = computed(() => {
   <div class="changelog">
     <header>
       <IconNewspaperVariant />
-      <h2>Changelog</h2>
+      <h2>{{ t('changelog') }}</h2>
     </header>
+    <p v-if="localeIndex !== 'root'" class="changelog-language">
+      {{ t('changelogEnglish') }}
+    </p>
     <div v-html="changelog" />
   </div>
   <div class="fullChangelog">
     <p>
-      View the full release
       <a :href="`${APP_GITHUB_URL}/releases/latest`" target="_blank" rel="noopener noreferrer">
-        here
+        {{ t('fullRelease') }}
       </a>
     </p>
   </div>
@@ -111,5 +116,12 @@ const changelog = computed(() => {
   margin: 0 0 1rem
   color: var(--vp-c-text-2)
   font-size: 0.9rem
+}
+
+.changelog .changelog-language {
+  margin: 0 0 0.75rem
+  color: var(--vp-c-text-3)
+  font-size: 0.85rem
+  font-style: italic
 }
 </style>

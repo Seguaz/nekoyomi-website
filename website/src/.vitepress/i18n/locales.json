@@ -1,0 +1,17 @@
+[
+  { "key": "es", "lang": "es", "dir": "ltr", "appLocale": "es" },
+  { "key": "pt-br", "lang": "pt-BR", "dir": "ltr", "appLocale": "pt-rBR" },
+  { "key": "pt", "lang": "pt-PT", "dir": "ltr", "appLocale": "pt" },
+  { "key": "fr", "lang": "fr", "dir": "ltr", "appLocale": "fr" },
+  { "key": "de", "lang": "de", "dir": "ltr", "appLocale": "de" },
+  { "key": "it", "lang": "it", "dir": "ltr", "appLocale": "it" },
+  { "key": "ru", "lang": "ru", "dir": "ltr", "appLocale": "ru" },
+  { "key": "uk", "lang": "uk", "dir": "ltr", "appLocale": "uk" },
+  { "key": "tr", "lang": "tr", "dir": "ltr", "appLocale": "tr" },
+  { "key": "id", "lang": "id", "dir": "ltr", "appLocale": "in" },
+  { "key": "zh", "lang": "zh-CN", "dir": "ltr", "appLocale": "zh-rCN" },
+  { "key": "hr", "lang": "hr", "dir": "ltr", "appLocale": "hr" },
+  { "key": "cs", "lang": "cs", "dir": "ltr", "appLocale": "cs" },
+  { "key": "ar", "lang": "ar", "dir": "rtl", "appLocale": "ar" },
+  { "key": "as", "lang": "as", "dir": "ltr", "appLocale": "as" }
+]

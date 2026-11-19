@@ -194,4 +194,31 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
   ]
 }
 
+function localizeItems(
+  items: DefaultTheme.SidebarItem[],
+  labels: Record<string, string>,
+  prefix: string,
+): DefaultTheme.SidebarItem[] {
+  return items.map(item => ({
+    ...item,
+    text: item.text ? (labels[item.text] ?? item.text) : item.text,
+    link: item.link?.startsWith('/') ? `${prefix}${item.link}` : item.link,
+    items: item.items ? localizeItems(item.items, labels, prefix) : item.items,
+  }))
+}
+
+/**
+ * Builds the sidebar for a locale.
+ * @param labels English label -> translated label (missing labels stay in English).
+ * @param prefix Locale path prefix, e.g. '/es' ('' for English).
+ */
+export function sidebarFor(labels: Record<string, string>, prefix = ''): DefaultTheme.SidebarMulti {
+  return Object.fromEntries(
+    Object.entries(sidebar).map(([path, items]) => [
+      `${prefix}${path}`,
+      localizeItems(items as DefaultTheme.SidebarItem[], labels, prefix),
+    ]),
+  )
+}
+
 export default sidebar

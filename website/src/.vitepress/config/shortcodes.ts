@@ -1,3 +1,6 @@
+import appNav from '../i18n/app-nav.json'
+import locales from '../i18n/locales.json'
+
 const iconMappings = {
   alertDecagramOutline: '<svg originalIcon="alertDecagramOutline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23,12L20.56,14.78L20.9,18.46L17.29,19.28L15.4,22.46L12,21L8.6,22.47L6.71,19.29L3.1,18.47L3.44,14.78L1,12L3.44,9.21L3.1,5.53L6.71,4.72L8.6,1.54L12,3L15.4,1.54L17.29,4.72L20.9,5.54L20.56,9.22L23,12M20.33,12L18.5,9.89L18.74,7.1L16,6.5L14.58,4.07L12,5.18L9.42,4.07L8,6.5L5.26,7.09L5.5,9.88L3.67,12L5.5,14.1L5.26,16.9L8,17.5L9.42,19.93L12,18.81L14.58,19.92L16,17.5L18.74,16.89L18.5,14.1L20.33,12M11,15H13V17H11V15M11,7H13V13H11V7" /></svg>',
   bookmarkBoxOutline: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 20H18V22H4C2.9 22 2 21.1 2 20V6H4V20M22 4V16C22 17.1 21.1 18 20 18H8C6.9 18 6 17.1 6 16V4C6 2.9 6.9 2 8 2H20C21.1 2 22 2.9 22 4M20 4H8V16H20V4M18 6H13V13L15.5 11.5L18 13V6Z" /></svg>',
@@ -77,29 +80,38 @@ const navigationMappings: Record<string, Navigation> = {
   'decoder': { name: 'Decoder', dependsOn: 'player-settings' },
 }
 
-function generateNavigationHtml(navKey: string) {
+const escapeHtml = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
+function generateNavigationHtml(navKey: string, locale: string) {
   const navData = navigationMappings[navKey]
 
   if (!navData) {
     return '<strong style=\'color:var(--vp-c-danger-1)\'>Unsupported Navigation!</strong>'
   }
 
-  const { name, icon, dependsOn } = navData
+  const { icon, dependsOn } = navData
+  // The app's own label in the page's language (taken from the app's translations), else English.
+  const name = (appNav as Record<string, Record<string, string>>)[locale]?.[navKey] ?? navData.name
 
   const iconHtml = icon ?? ''
-  let html = `<span class='shortcode navigation ${navKey}'>${iconHtml}<span class='name'>${name}</span></span>`
+  let html = `<span class='shortcode navigation ${navKey}'>${iconHtml}<span class='name'>${escapeHtml(name)}</span></span>`
 
   if (dependsOn) {
-    html = `${generateNavigationHtml(dependsOn)} -> ${html}`
+    html = `${generateNavigationHtml(dependsOn, locale)} -> ${html}`
   }
 
   return html
 }
 
+const localeKeys = new Set(locales.map(l => l.key))
+
 const shortcodes = {
   nav: {
-    render({ to }) {
-      return generateNavigationHtml(to)
+    render({ to, lang }, env) {
+      // Localized pages live in src/<locale>/; `lang="en"` keeps English names next to English text.
+      const firstSegment = String(env?.relativePath ?? '').split('/')[0]
+      const locale = lang ?? (localeKeys.has(firstSegment) ? firstSegment : 'en')
+      return generateNavigationHtml(to, locale)
     },
   },
 }

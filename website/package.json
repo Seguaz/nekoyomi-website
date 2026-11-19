@@ -18,11 +18,12 @@
     "pnpm": ">=10"
   },
   "scripts": {
-    "dev": "vitepress dev src",
-    "build": "vitepress build src",
+    "dev": "node scripts/i18n.mjs && vitepress dev src",
+    "build": "node scripts/i18n.mjs && vitepress build src",
     "verify": "node scripts/verify-dist.mjs",
     "test": "pnpm build && pnpm verify",
-    "preview": "vitepress preview src"
+    "preview": "vitepress preview src",
+    "i18n": "node scripts/i18n.mjs"
   },
   "dependencies": {
     "@iconify-prerendered/vue-mdi": "0.28.1718880438",

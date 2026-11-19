@@ -7,11 +7,11 @@ description: Frequently Asked Questions
 # General
 Frequently Asked Questions
 
-## What is Nekoyomi?
+## What is Nekoyomi? {#what-is-nekoyomi}
 **Nekoyomi** is a free, open-source app to watch anime and read manga and light novels on Android.
 It is a fork of [Aniyomi](https://github.com/aniyomiorg/aniyomi), which is itself based on [Mihon](https://github.com/mihonapp/mihon), and it keeps compatibility with their extensions and backups.
 
-## Why isn't Nekoyomi on the Google Play Store?
+## Why isn't Nekoyomi on the Google Play Store? {#why-isn-t-nekoyomi-on-the-google-play-store}
 **Nekoyomi** won't be on the **Google Play Store**.
 
 APK-based extensions conflict with [Google Play's content policy](https://play.google.com/about/developer-content-policy/).
@@ -19,26 +19,26 @@ APK-based extensions conflict with [Google Play's content policy](https://play.g
 
 Only download **Nekoyomi** from the [download page](/download/) or from the [official GitHub repository](https://github.com/Seguaz/Nekoyomi/releases).
 
-## Is Nekoyomi available for iOS/iPadOS?
+## Is Nekoyomi available for iOS/iPadOS? {#is-nekoyomi-available-for-ios-ipados}
 There is no iOS or iPadOS version and neither are there plans for one.
 Porting is difficult due to the separate codebases of iOS and Android apps.
 
 Any app proclaiming to be "**Nekoyomi for iOS**" is not by us and should be treated as a scam.
 
-## Can I read light novels?
+## Can I read light novels? {#can-i-read-light-novels}
 Yes!
 **Nekoyomi** has a dedicated **Novel** section with its own library, categories and text reader.
 Novel sources come from novel extension repositories, just like manga and anime sources.
 See the [light novels guide](/docs/guides/novels) to get started.
 
-## Does Nekoyomi have home-screen widgets?
+## Does Nekoyomi have home-screen widgets? {#does-nekoyomi-have-home-screen-widgets}
 Yes. Besides the cover grid widget, there are **Updates (list)** and **Anime Updates (list)** widgets that show your latest updates with cover, title and new chapter or episode.
 
-## What does Nekoyomi add over Aniyomi?
+## What does Nekoyomi add over Aniyomi? {#what-does-nekoyomi-add-over-aniyomi}
 Light novels, custom series folders, library grouping and tag filters, mass migration, online subtitles, a floating navigation bar, community app icons and much more.
 See the [full list of features](/docs/features).
 
-## Can I use my Aniyomi or Mihon backup?
+## Can I use my Aniyomi or Mihon backup? {#can-i-use-my-aniyomi-or-mihon-backup}
 Yes.
 **Nekoyomi** can restore backups created by **Aniyomi** and **Mihon**.
 See the [backups guide](/docs/guides/backups) for details and limitations.

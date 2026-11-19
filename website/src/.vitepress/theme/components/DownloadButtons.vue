@@ -2,21 +2,24 @@
 import { computed, onMounted, ref } from 'vue'
 import { data as release } from '../data/release.data'
 import { APP_GITHUB_URL } from '../../config/constants'
+import { splitTemplate, useI18n } from '../i18n'
+
+const { t, localePath } = useI18n()
 
 interface Variant {
   abi: string
   label: string
-  hint: string
+  hint: 'variantArm64' | 'variantArmv7' | 'variantX8664' | 'variantX86'
 }
 
 // Asset names produced by the Nekoyomi CI:
 //   nekoyomi-v0.20.6.apk (universal)
 //   nekoyomi-arm64-v8a-v0.20.6.apk, nekoyomi-armeabi-v7a-..., nekoyomi-x86-..., nekoyomi-x86_64-...
 const VARIANTS: Variant[] = [
-  { abi: 'arm64-v8a', label: 'arm64-v8a', hint: 'Most phones from the last ~8 years' },
-  { abi: 'armeabi-v7a', label: 'armeabi-v7a', hint: 'Older 32-bit phones' },
-  { abi: 'x86_64', label: 'x86_64', hint: 'Emulators, Chromebooks' },
-  { abi: 'x86', label: 'x86', hint: 'Old emulators' },
+  { abi: 'arm64-v8a', label: 'arm64-v8a', hint: 'variantArm64' },
+  { abi: 'armeabi-v7a', label: 'armeabi-v7a', hint: 'variantArmv7' },
+  { abi: 'x86_64', label: 'x86_64', hint: 'variantX8664' },
+  { abi: 'x86', label: 'x86', hint: 'variantX86' },
 ]
 
 const tagName = computed(() => release.stable.tag_name ?? 'v0.0.0')
@@ -39,6 +42,10 @@ const variants = computed(() => VARIANTS
   })
   .filter(variant => variant.asset))
 
+const universalParts = computed(() => splitTemplate(t('universalApk')))
+const checksumParts = computed(() => splitTemplate(t('checksums')))
+const cautionParts = computed(() => splitTemplate(t('cautionMore')))
+
 const isAndroid = ref(true)
 
 onMounted(() => {
@@ -50,24 +57,20 @@ onMounted(() => {
   <div>
     <div v-if="!isAndroid" class="custom-block danger">
       <p class="custom-block-title">
-        Unsupported operating system
+        {{ t('unsupportedTitle') }}
       </p>
-      <p>
-        <strong>Nekoyomi</strong> is an <strong>Android app</strong> only.
-        Use an <strong>Android device</strong> to download and install the app.
-      </p>
+      <p>{{ t('unsupportedBody') }}</p>
     </div>
     <div v-if="!isAndroid" class="custom-block warning">
       <p class="custom-block-title">
-        Caution
+        {{ t('cautionTitle') }}
       </p>
-      <p>
-        Any app for any operating systems other than Android called
-        <strong>Nekoyomi</strong> is not affiliated with this project.
-      </p>
+      <p>{{ t('cautionBody') }}</p>
       <blockquote>
-        For more information, read the
-        <a href="/docs/faq/general">General FAQ</a>.
+        <template v-for="(part, index) of cautionParts" :key="index">
+          <a v-if="'slot' in part" :href="localePath('/docs/faq/general')">{{ t('generalFaq') }}</a>
+          <template v-else>{{ part.text }}</template>
+        </template>
       </blockquote>
     </div>
     <div class="download-buttons">
@@ -78,7 +81,7 @@ onMounted(() => {
         :href="universal.browser_download_url"
       >
         <IconDownload />
-        <span class="text">Download</span>
+        <span class="text">{{ t('download') }}</span>
         <span class="version">{{ tagName }}</span>
       </a>
       <a
@@ -88,30 +91,32 @@ onMounted(() => {
         rel="noopener noreferrer"
       >
         <IconGithub />
-        <span class="text">All releases</span>
+        <span class="text">{{ t('allReleases') }}</span>
       </a>
     </div>
     <span class="version-disclaimer">
-      Universal APK · Requires <strong>Android 8.0</strong> or higher.
+      <template v-for="(part, index) of universalParts" :key="index">
+        <strong v-if="'slot' in part">Android 8.0</strong>
+        <template v-else>{{ part.text }}</template>
+      </template>
     </span>
 
     <details v-if="variants.length" class="custom-block details variants">
-      <summary>Smaller downloads for a specific device (advanced)</summary>
-      <p>
-        The universal APK works on every device. If you know your device's CPU architecture,
-        you can download a smaller APK instead. When in doubt, use the universal one.
-      </p>
+      <summary>{{ t('variantsTitle') }}</summary>
+      <p>{{ t('variantsBody') }}</p>
       <ul>
         <li v-for="variant of variants" :key="variant.abi">
           <a :href="variant.asset!.browser_download_url" :download="variant.asset!.name">
             <code>{{ variant.label }}</code>
           </a>
-          – {{ variant.hint }}
+          – {{ t(variant.hint) }}
         </li>
       </ul>
       <p>
-        You can verify any download against the <strong>SHA-256 checksums</strong>
-        published in the changelog below.
+        <template v-for="(part, index) of checksumParts" :key="index">
+          <strong v-if="'slot' in part">{{ t('checksumsTerm') }}</strong>
+          <template v-else>{{ part.text }}</template>
+        </template>
       </p>
     </details>
   </div>
