@@ -29,6 +29,11 @@ Any app proclaiming to be "**Nekoyomi for iOS**" is not by us and should be trea
 Yes!
 **Nekoyomi** has a dedicated **Novel** section with its own library, categories and text reader.
 Novel sources come from novel extension repositories, just like manga and anime sources.
+See the [light novels guide](/docs/guides/novels) to get started.
+
+## What does Nekoyomi add over Aniyomi?
+Light novels, custom series folders, library grouping and tag filters, mass migration, online subtitles, a floating navigation bar, community app icons and much more.
+See the [full list of features](/docs/features).
 
 ## Can I use my Aniyomi or Mihon backup?
 Yes.

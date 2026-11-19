@@ -43,4 +43,27 @@ You will need to remove these manually with a file manager.
 1. Select the **Source** you'd like to migrate _to_ by tapping the **Series** thumbnail.
 1. Choose which data you want to transfer over, and you're done.
 
+### Migrating several series at once
+
+1. Tap into Browse on the bottom navbar and open the Migrate tab.
+1. Select the **Source** that you'd like to migrate _from_.
+1. Long-press a **Series** to start selecting, then tap the other series you want to migrate (or use **Select all**).
+1. Tap the **Migrate** arrow in the toolbar. **Nekoyomi** searches your sources for each series and shows the best match it finds.
+1. Review the results. Tap the <nav to="overflow"> menu on any card to pick a different match by hand or to skip that series.
+1. Tap **Migrate all**.
+
 ::::
+
+## Source priority
+
+You can choose the order in which sources are searched when migrating.
+
+1. On a migration screen, open **Source priority**.
+1. Drag your preferred sources to the top. Matches are searched there first, then in the rest.
+1. Uncheck a source to skip it, and use the language chips to show only the sources in a given language.
+
+The same order is used by the [automatic source fallback](/docs/features#video-player) in the video player.
+
+::: tip
+Migration respects content types: novels are only matched with novel sources, and manga only with manga sources.
+:::

@@ -74,6 +74,7 @@ const navigationMappings: Record<string, Navigation> = {
   'player-settings': { name: 'Player settings', icon: iconMappings.playerSettings, dependsOn: 'main_more' },
   'internal-player': { name: 'Internal Player', icon: iconMappings.internalPlayer, dependsOn: 'player-settings' },
   'gestures': { name: 'Gestures', icon: iconMappings.gestures, dependsOn: 'player-settings' },
+  'decoder': { name: 'Decoder', dependsOn: 'player-settings' },
 }
 
 function generateNavigationHtml(navKey: string) {

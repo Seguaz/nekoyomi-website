@@ -17,6 +17,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
           link: '/download/',
         },
         {
+          text: 'Features',
+          link: '/docs/features',
+        },
+        {
           text: 'Changelogs',
           link: '/changelogs/',
         },
@@ -78,6 +82,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
         {
           text: 'Getting started',
           link: '/docs/guides/getting-started',
+        },
+        {
+          text: 'Light novels',
+          link: '/docs/guides/novels',
         },
         {
           text: 'Troubleshooting',

@@ -16,9 +16,14 @@ const nav: DefaultTheme.NavItem[] = [
     ],
   },
   {
+    text: 'Features',
+    link: '/docs/features',
+    activeMatch: '^/docs/features',
+  },
+  {
     text: 'Docs',
     link: '/docs/guides/getting-started',
-    activeMatch: '/docs/',
+    activeMatch: '^/docs/(?!features)',
   },
   {
     text: 'News',

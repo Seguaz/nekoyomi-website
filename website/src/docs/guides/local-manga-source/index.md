@@ -12,6 +12,27 @@ If you like to download and organize your media, then you want to know how to ma
 This page explores some advanced features.
 :::
 
+## Importing from the app
+
+The easiest way to add series is to import them from **Nekoyomi** itself, without a file manager.
+
+1. Open <nav to="sources"> and tap the **Local source**.
+1. Tap the **Import** button in the toolbar.
+1. Enter a title for the series.
+1. Tap **Add files** or **Add folder** and pick what you want to import. Chapter subfolders are kept as chapters.
+1. Confirm, and the series appears in the Local source.
+
+**Nekoyomi** copies the files into its `local` folder, so your original files aren't touched.
+
+::: tip Deleting local series
+Long-press a series in the Local source and choose **Delete from local** to remove it and its copied files.
+If you import the same title again later, it starts fresh.
+:::
+
+::: tip Light novels
+For text novels in `.epub` format, use the **Local novel source** instead. See the [light novels guide](/docs/guides/novels#local-novels).
+:::
+
 ## Creating local series
 
 1. In the location you specified as your storage location (e.g., `/Nekoyomi/`), there should be a `local` folder. Place correctly structured series inside that (e.g. `/Nekoyomi/local/`).

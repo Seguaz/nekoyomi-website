@@ -135,6 +135,26 @@ The following illustrates the folder structure:
     </li>
     <li>
       <img src="/img/folder.svg" alt="Folder" class="tree-icon icon-folder">
+      <span class="folder main">localnovel</span>
+      <ul>
+        <li>
+          <img src="/img/folder.svg" alt="Folder" class="tree-icon icon-folder">
+          <span class="folder dynamic">Novel title</span>
+          <ul>
+            <li>
+              <img src="/img/file.svg" alt="File" class="tree-icon icon-epub">
+              <span class="file epub">Volume01<span class="file-extension">.epub</span></span>
+            </li>
+            <li>
+              <img src="/img/file.svg" alt="File" class="tree-icon icon-epub">
+              <span class="file epub">...</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <img src="/img/folder.svg" alt="Folder" class="tree-icon icon-folder">
       <span class="folder main">mpv-config</span>
       <ul>
         <li>

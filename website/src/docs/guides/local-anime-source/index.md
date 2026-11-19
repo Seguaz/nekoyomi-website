@@ -12,6 +12,23 @@ If you like to download and organize your media, then you want to know how to ma
 This page explores some advanced features.
 :::
 
+## Importing from the app
+
+The easiest way to add anime is to import them from **Nekoyomi** itself, without a file manager.
+
+1. Open <nav to="sources"> and tap the **Local anime source**.
+1. Tap the **Import** button in the toolbar.
+1. Enter a title for the anime.
+1. Tap **Add files** or **Add folder** and pick what you want to import. Videos inside per-episode subfolders are imported as episodes.
+1. Confirm, and the anime appears in the Local anime source.
+
+**Nekoyomi** copies the files into its `localanime` folder, so your original files aren't touched.
+
+::: tip Deleting local anime
+Long-press an anime in the Local anime source and choose **Delete from local** to remove it and its copied files.
+If you import the same title again later, it starts fresh.
+:::
+
 ## Creating local series
 
 1. In the location you specified as your storage location (e.g., `/Nekoyomi/`), there should be a `localanime` folder. Place correctly structured series inside that (e.g. `/Nekoyomi/localanime/`).

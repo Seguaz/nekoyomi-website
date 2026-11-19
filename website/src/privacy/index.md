@@ -34,6 +34,7 @@ The app only connects to the internet to do what you ask it to:
 - **Sources and extensions** you install, and the **extension repositories** you add, to browse, read, watch and download content.
   These are third-party services that are not operated by us.
 - **Trackers** (e.g. MyAnimeList, AniList) and other optional services, only if you log in to or enable them.
+- **OpenSubtitles**, only when you search for subtitles from the video player. The search sends the title, the season and episode number when known, and the subtitle languages, without any account.
 - **GitHub**, to check for app updates and to download them.
 
 Each of these services has its own privacy policy, which we recommend you review.
