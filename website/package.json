@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@iconify-prerendered/vue-mdi": "0.28.1718880438",
-    "@octokit/rest": "21.1.1",
+    "@octokit/rest": "22.0.1",
     "markdown-it": "14.3.3",
     "markdown-it-shortcode-tag": "1.1.0",
     "vue": "3.5.44"
