@@ -40,8 +40,8 @@ importers:
         specifier: 0.13.1
         version: 0.13.1(markdown-it@14.3.3)
       '@mdit/plugin-img-size':
-        specifier: 0.13.1
-        version: 0.13.1(markdown-it@14.3.3)
+        specifier: 1.0.3
+        version: 1.0.3(markdown-it@14.3.3)
       '@mdit/plugin-include':
         specifier: 0.13.1
         version: 0.13.1(markdown-it@14.3.3)
@@ -398,11 +398,11 @@ packages:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-img-size@0.13.1':
-    resolution: {integrity: sha512-cgihl72BNzij7GXjrqcKhl2eOqAlqWHiImOgblJPghDFNFKnnynty/Bf9nwbj8hTnhVWznFeuwawzXBfKYNbkg==}
-    engines: {node: '>= 18'}
+  '@mdit/plugin-img-size@1.0.3':
+    resolution: {integrity: sha512-Jg43Jtz5ZCfSsRtD8NH9B/lwigm/nZYowpSHSlotRPtXmtkgq+oV7XCjuAcUhOgVfrK4Pmk/bLWHTFzH7u46Wg==}
+    engines: {node: '>=22'}
     peerDependencies:
-      markdown-it: ^14.1.0
+      markdown-it: ^14.2.0
     peerDependenciesMeta:
       markdown-it:
         optional: true
@@ -1539,7 +1539,7 @@ snapshots:
     optionalDependencies:
       markdown-it: 14.3.3
 
-  '@mdit/plugin-img-size@0.13.1(markdown-it@14.3.3)':
+  '@mdit/plugin-img-size@1.0.3(markdown-it@14.3.3)':
     dependencies:
       '@types/markdown-it': 14.1.2
     optionalDependencies:
