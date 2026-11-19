@@ -8,6 +8,7 @@ export const APP_GITHUB_URL = `https://github.com/${APP_REPO.owner}/${APP_REPO.r
 export const WEBSITE_GITHUB_URL = 'https://github.com/Seguaz/nekoyomi-website'
 export const DISCORD_URL = 'https://discord.gg/ZAUadQD5EM'
 export const KOFI_URL = 'https://ko-fi.com/seguaz_'
+export const AUTHOR_URL = 'https://github.com/Seguaz'
 
 /** Brand colors sampled from the Nekoyomi logo. */
 export const BRAND_BLUE = '#1677CA'

@@ -1,9 +1,13 @@
 <script setup lang='ts'>
 import { useData } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme, { useSidebar } from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+import MadeBy from './components/MadeBy.vue'
 
 const { isDark } = useData()
+// The default footer is hidden on pages with a sidebar, so the credit line is placed
+// after the doc content there, and below the footer everywhere else.
+const { hasSidebar } = useSidebar()
 
 function shouldEnableTransitions() {
   return 'startViewTransition' in document
@@ -42,7 +46,14 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
-  <DefaultTheme.Layout />
+  <DefaultTheme.Layout>
+    <template #doc-after>
+      <MadeBy v-if="hasSidebar" class="made-by-doc" />
+    </template>
+    <template #layout-bottom>
+      <MadeBy v-if="!hasSidebar" class="made-by-footer" />
+    </template>
+  </DefaultTheme.Layout>
 </template>
 
 <style lang='stylus'>
@@ -60,5 +71,15 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 ::view-transition-new(root),
 .dark::view-transition-old(root) {
   z-index: 9999
+}
+
+.Layout .MadeBy.made-by-footer {
+  padding-top: 0
+}
+
+.VPDoc .MadeBy.made-by-doc {
+  margin-top: 48px
+  padding: 24px 0 0
+  border-top: 1px solid var(--vp-c-divider)
 }
 </style>
