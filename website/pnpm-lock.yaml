@@ -31,8 +31,8 @@ importers:
         specifier: 0.13.1
         version: 0.13.1(markdown-it@14.3.3)
       '@mdit/plugin-figure':
-        specifier: 0.13.1
-        version: 0.13.1(markdown-it@14.3.3)
+        specifier: 1.1.1
+        version: 1.1.1(markdown-it@14.3.3)
       '@mdit/plugin-img-lazyload':
         specifier: 0.13.1
         version: 0.13.1(markdown-it@14.3.3)
@@ -371,11 +371,11 @@ packages:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-figure@0.13.1':
-    resolution: {integrity: sha512-bxeUVMPAuXHYRqPzU+1ux7R3LkpyHTdavCa05rQUhzDI07N+BZDE7oOABXnnFbx6ESamzu3/FBtq9VKjoifLmw==}
-    engines: {node: '>= 18'}
+  '@mdit/plugin-figure@1.1.1':
+    resolution: {integrity: sha512-78hGR8RCWqFkf56ApQ7i3LYu9RkA1KVAjMukeNO5Z0fFrOwNPGLpTNLVaMwfYhT46H1Le5fniMf7qEKLF7KnUQ==}
+    engines: {node: '>=22'}
     peerDependencies:
-      markdown-it: ^14.1.0
+      markdown-it: ^14.2.0
     peerDependenciesMeta:
       markdown-it:
         optional: true
@@ -1521,7 +1521,7 @@ snapshots:
     optionalDependencies:
       markdown-it: 14.3.3
 
-  '@mdit/plugin-figure@0.13.1(markdown-it@14.3.3)':
+  '@mdit/plugin-figure@1.1.1(markdown-it@14.3.3)':
     dependencies:
       '@types/markdown-it': 14.1.2
     optionalDependencies:
