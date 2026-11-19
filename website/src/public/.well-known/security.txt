@@ -1,0 +1,8 @@
+# Security contact for the Nekoyomi website and app.
+# Please report vulnerabilities privately through GitHub instead of opening a public issue.
+Contact: https://github.com/Seguaz/nekoyomi-website/security/advisories/new
+Contact: https://github.com/Seguaz/Nekoyomi/security/advisories/new
+Policy: https://github.com/Seguaz/nekoyomi-website/blob/main/SECURITY.md
+Preferred-Languages: en, es
+Canonical: https://nekoyomi.seguaz.online/.well-known/security.txt
+Expires: 2027-11-19T00:00:00.000Z

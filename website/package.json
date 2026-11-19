@@ -1,0 +1,49 @@
+{
+  "name": "nekoyomi-website",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.34.9",
+  "description": "Official website for the Nekoyomi app.",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seguaz/nekoyomi-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Seguaz/nekoyomi-website/issues"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "verify": "node scripts/verify-dist.mjs",
+    "test": "pnpm build && pnpm verify",
+    "preview": "vitepress preview src"
+  },
+  "dependencies": {
+    "@iconify-prerendered/vue-mdi": "0.28.1718880438",
+    "@octokit/rest": "21.1.1",
+    "markdown-it": "14.3.3",
+    "markdown-it-shortcode-tag": "1.1.0",
+    "vue": "3.5.44"
+  },
+  "devDependencies": {
+    "@mdit/plugin-attrs": "0.13.1",
+    "@mdit/plugin-figure": "0.13.1",
+    "@mdit/plugin-img-lazyload": "0.13.1",
+    "@mdit/plugin-img-mark": "0.13.1",
+    "@mdit/plugin-img-size": "0.13.1",
+    "@mdit/plugin-include": "0.13.1",
+    "@octokit/types": "13.6.1",
+    "@types/markdown-it": "14.1.2",
+    "@types/node": "22.9.3",
+    "feed": "4.2.2",
+    "stylus": "0.64.0",
+    "vitepress": "1.6.4",
+    "vitepress-plugin-tabs": "0.7.3"
+  }
+}

@@ -1,0 +1,14 @@
+# Supply-chain hardening (pnpm >= 10)
+
+# Refuse to install any package version published less than 7 days ago.
+# Most malicious releases are detected and pulled within that window.
+minimumReleaseAge: 10080
+
+# Lifecycle scripts (postinstall, etc.) are blocked by default in pnpm 10.
+# Only the packages listed here may run them.
+onlyBuiltDependencies:
+  - esbuild
+
+# Force patched versions of build-time tools flagged by `pnpm audit`.
+overrides:
+  vite: 6.4.5

@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ⚠️ Application issue
+    url: https://github.com/Seguaz/Nekoyomi/issues/new/choose
+    about: Issues and requests about the app itself should be opened in the Nekoyomi app repository instead
+  - name: 🔒 Security vulnerability
+    url: https://github.com/Seguaz/nekoyomi-website/security/advisories/new
+    about: Please report security problems privately, never in a public issue
+  - name: 🖥️ Nekoyomi website
+    url: https://nekoyomi.seguaz.online/docs/guides/troubleshooting/
+    about: Guides, troubleshooting, and answers to common questions
+  - name: 💬 Discord
+    url: https://discord.gg/ZAUadQD5EM
+    about: Get help and talk with the community
