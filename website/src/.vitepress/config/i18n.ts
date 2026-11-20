@@ -17,6 +17,17 @@ export const english: Dictionary = en
 export const locales = localeList as LocaleInfo[]
 
 const I18N_DIR = fileURLToPath(new URL('../i18n/', import.meta.url))
+const TRANSLATIONS_DIR = fileURLToPath(new URL('../../../translations/', import.meta.url))
+
+/**
+ * Whether a page has a real translation (website/translations/<key>/<page>.md).
+ * Pages without one are English copies under the locale, so search engines are pointed to the English page.
+ * @param key Locale key, e.g. 'es'.
+ * @param page Page path relative to src/, e.g. 'docs/features.md'.
+ */
+export function isTranslated(key: string, page: string): boolean {
+  return existsSync(`${TRANSLATIONS_DIR}${key}/${page}`)
+}
 
 /** Deep-merges a translation over the English dictionary, so missing keys fall back to English. */
 function withFallback<T>(base: T, override: unknown): T {

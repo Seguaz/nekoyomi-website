@@ -1,5 +1,6 @@
 ---
-title: Home
+title: "Nekoyomi – Anime, manga and light novels in one app"
+titleTemplate: false
 layout: home
 
 hero:

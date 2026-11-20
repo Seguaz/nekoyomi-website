@@ -1,5 +1,6 @@
 ---
-title: 首页
+title: "Nekoyomi – 动画、漫画和轻小说，尽在一个应用"
+titleTemplate: false
 layout: home
 
 hero:

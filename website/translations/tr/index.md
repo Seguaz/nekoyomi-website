@@ -1,5 +1,6 @@
 ---
-title: Ana sayfa
+title: "Nekoyomi – Anime, manga ve light novel tek uygulamada"
+titleTemplate: false
 layout: home
 
 hero:

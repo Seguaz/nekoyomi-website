@@ -1,5 +1,6 @@
 ---
-title: Accueil
+title: "Nekoyomi – Animés, mangas et light novels dans une seule application"
+titleTemplate: false
 layout: home
 
 hero:

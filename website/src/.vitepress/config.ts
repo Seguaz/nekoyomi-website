@@ -18,7 +18,7 @@ import generateMeta from './config/hooks/generateMeta'
 import generateFeed from './config/hooks/generateFeed'
 
 import { SITE_URL } from './config/constants'
-import { dictionary, english, locales } from './config/i18n'
+import { dictionary, english, isTranslated, locales } from './config/i18n'
 import { LEGACY_REDIRECTS, injectCsp, redirectPage } from './config/security'
 import { localeThemeConfig } from './config/themeConfig'
 
@@ -39,6 +39,18 @@ export default defineConfig({
   description,
   sitemap: {
     hostname,
+    // Only list pages worth indexing: no sandbox, and no English copies under a locale (their canonical is the English page).
+    transformItems: items => items.filter(({ url }) => {
+      const path = url.replace(/^https?:\/\/[^/]+/, '').replace(/^\//, '')
+      if (/(^|\/)sandbox(\/|$)/.test(path))
+        return false
+      const [first, ...rest] = path.split('/')
+      if (!locales.some(l => l.key === first))
+        return true
+      const base = rest.join('/').replace(/\/$/, '')
+      const candidates = base ? [`${base}.md`, `${base}/index.md`] : ['index.md']
+      return candidates.some(page => isTranslated(first, page))
+    }),
   },
   head: headConfig,
   markdown: markdownConfig,

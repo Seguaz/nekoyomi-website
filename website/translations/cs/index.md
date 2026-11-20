@@ -1,5 +1,6 @@
 ---
-title: Domů
+title: "Nekoyomi – Anime, manga a light novely v jedné aplikaci"
+titleTemplate: false
 layout: home
 
 hero:

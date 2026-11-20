@@ -1,5 +1,6 @@
 ---
-title: মূল পৃষ্ঠা
+title: "Nekoyomi – এনিমে, মাঙ্গা আৰু লাইট নভেল, সকলো এটা এপতে"
+titleTemplate: false
 layout: home
 
 hero:

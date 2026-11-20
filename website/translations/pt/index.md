@@ -1,5 +1,6 @@
 ---
-title: Início
+title: "Nekoyomi – Anime, manga e light novels numa só aplicação"
+titleTemplate: false
 layout: home
 
 hero:

@@ -1,5 +1,6 @@
 ---
-title: Главная
+title: "Nekoyomi – Аниме, манга и ранобэ в одном приложении"
+titleTemplate: false
 layout: home
 
 hero:

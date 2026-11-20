@@ -1,5 +1,6 @@
 ---
-title: Beranda
+title: "Nekoyomi – Anime, manga, dan light novel dalam satu aplikasi"
+titleTemplate: false
 layout: home
 
 hero:

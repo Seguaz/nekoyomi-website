@@ -1,5 +1,6 @@
 ---
-title: Головна
+title: "Nekoyomi – Аніме, манґа та ранобе в одному застосунку"
+titleTemplate: false
 layout: home
 
 hero:

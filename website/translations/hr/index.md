@@ -1,5 +1,6 @@
 ---
-title: Početna
+title: "Nekoyomi – Anime, manga i light novele u jednoj aplikaciji"
+titleTemplate: false
 layout: home
 
 hero:

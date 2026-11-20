@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /sandbox/
+Disallow: /*/sandbox/
 
 Sitemap: https://nekoyomi.seguaz.online/sitemap.xml

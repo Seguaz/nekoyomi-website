@@ -1,5 +1,6 @@
 ---
-title: الرئيسية
+title: "Nekoyomi – الأنمي والمانغا والروايات الخفيفة في تطبيق واحد"
+titleTemplate: false
 layout: home
 
 hero:
